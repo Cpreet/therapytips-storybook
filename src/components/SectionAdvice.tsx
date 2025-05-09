@@ -4,11 +4,13 @@ const SectionAdvice = () => {
       title: "Advice Column 1",
       description: "Advice Column 1",
       image: "https://picsum.photos/450/250",
+      link: "https://www.therapytips.com/self-care",
     },
     {
       title: "Advice Column 2",
       description: "Advice Column 2",
       image: "https://picsum.photos/450/250",
+      link: "https://www.therapytips.com/self-care",
     },
   ];
   return (
@@ -29,16 +31,21 @@ type AdviceColumnItem = {
   title: string;
   description: string;
   image: string;
+  link: string;
 };
 
 const AdviceColumnItem = ({ advice }: { advice: AdviceColumnItem }) => {
   return (
     <div className="flex flex-col">
       <img src={advice.image} alt={advice.title} />
-      <div className="flex flex-col text-center bg-(--therapy-tips)/22 p-2">
+      <a
+        href={advice.link}
+        className="flex flex-col text-center bg-(--therapy-tips)/22 p-2
+        hover:bg-fuchsia-950 hover:cursor-pointer hover:text-white transition-all duration-200"
+      >
         <h2 className="text-sm font-bold">{advice.title}</h2>
         <p className="text-xs">{advice.description}</p>
-      </div>
+      </a>
     </div>
   );
 };

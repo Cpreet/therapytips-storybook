@@ -6,14 +6,52 @@ const Header = () => {
     <header className="flex flex-col items-center justify-center w-full">
       <img src={therapytips} alt="TherapyTips" />
       <div className="flex items-center justify-center gap-14 h-10.5 bg-(--therapy-tips) w-full text-white font-normal">
-        <a href="https://www.therapytips.com">Home</a>
-        <a href="https://www.therapytips.com">Articles</a>
-        <a href="https://www.therapytips.com">Interviews</a>
-        <a href="https://www.therapytips.com">Advice</a>
-        <a href="https://www.therapytips.com">Personality Tests</a>
-        <a href="https://www.therapytips.com">Mental Health Topics A-Z</a>
-        <a href="https://www.therapytips.com">Find a Therapist</a>
-        <a href="https://www.therapytips.com">
+        <a
+          href="https://www.therapytips.com"
+          className="border-b border-transparent hover:border-white transition-all duration-200"
+        >
+          Home
+        </a>
+        <a
+          href="https://www.therapytips.com"
+          className="border-b border-transparent hover:border-white transition-all duration-200"
+        >
+          Articles
+        </a>
+        <a
+          href="https://www.therapytips.com"
+          className="border-b border-transparent hover:border-white transition-all duration-200"
+        >
+          Interviews
+        </a>
+        <a
+          href="https://www.therapytips.com"
+          className="border-b border-transparent hover:border-white transition-all duration-200"
+        >
+          Advice
+        </a>
+        <a
+          href="https://www.therapytips.com"
+          className="border-b border-transparent hover:border-white transition-all duration-200"
+        >
+          Personality Tests
+        </a>
+        <a
+          href="https://www.therapytips.com"
+          className="border-b border-transparent hover:border-white transition-all duration-200"
+        >
+          Mental Health Topics A-Z
+        </a>
+        <a
+          href="https://www.therapytips.com"
+          className="border-b border-transparent hover:border-white transition-all duration-200"
+        >
+          Find a Therapist
+        </a>
+        <a
+          href="https://www.therapytips.com"
+          className="border-b border-transparent hover:border-white transition-all duration-200"
+        >
           <SearchIcon className="size-4" />
         </a>
       </div>

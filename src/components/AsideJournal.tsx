@@ -17,7 +17,10 @@ const AsideJournal = () => {
         mailing list?
       </p>
       <a href="https://www.therapytips.com/journal-club">
-        <button className="flex w-fit items-center gap-2 border-2 border-fuchsia-900 rounded-md px-4 py-2 hover:bg-fuchsia-300 hover:cursor-pointer">
+        <button
+          className="flex w-fit items-center gap-2 border-2 border-fuchsia-900 rounded-md px-4 py-2 
+        hover:bg-fuchsia-950 hover:cursor-pointer hover:text-white transition-all duration-200"
+        >
           MORE DETAILS <ChevronRightIcon className="size-4" />
         </button>
       </a>

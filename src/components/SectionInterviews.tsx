@@ -4,21 +4,25 @@ const SectionInterviews = () => {
       title: "Interview 1",
       description: "Description of Interview 1",
       image: "https://picsum.photos/450/250",
+      link: "https://www.therapytips.com/self-care",
     },
     {
       title: "Interview 2",
       description: "Description of Interview 2",
       image: "https://picsum.photos/450/250",
+      link: "https://www.therapytips.com/self-care",
     },
     {
       title: "Interview 3",
       description: "Description of Interview 3",
       image: "https://picsum.photos/450/250",
+      link: "https://www.therapytips.com/self-care",
     },
     {
       title: "Interview 4",
       description: "Description of Interview 4",
       image: "https://picsum.photos/450/250",
+      link: "https://www.therapytips.com/self-care",
     },
   ];
   return (
@@ -33,6 +37,7 @@ const SectionInterviews = () => {
             title={interview.title}
             description={interview.description}
             image={interview.image}
+            link={interview.link}
           />
         ))}
       </div>
@@ -44,6 +49,7 @@ type Interview = {
   title: string;
   description: string;
   image: string;
+  link: string;
 };
 
 const InterviewCard = (interview: Interview) => {
@@ -56,10 +62,14 @@ const InterviewCard = (interview: Interview) => {
         height={250}
         className="object-cover"
       />
-      <div className="flex flex-col text-center bg-(--therapy-tips)/22 p-2">
+      <a
+        href={interview.link}
+        className="flex flex-col text-center bg-(--therapy-tips)/22 p-2
+        hover:bg-fuchsia-950 hover:cursor-pointer hover:text-white transition-all duration-200"
+      >
         <h2 className="text-sm font-bold">{interview.title}</h2>
         <p className="text-xs">{interview.description}</p>
-      </div>
+      </a>
     </div>
   );
 };

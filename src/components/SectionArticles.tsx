@@ -4,21 +4,25 @@ const SectionArticles = () => {
       title: "The Importance of Self-Care",
       description: "How to take care of yourself and your mental health",
       image: "https://picsum.photos/450/250",
+      link: "https://www.therapytips.com/self-care",
     },
     {
       title: "The Importance of Self-Care",
       description: "How to take care of yourself and your mental health",
       image: "https://picsum.photos/450/250",
+      link: "https://www.therapytips.com/self-care",
     },
     {
       title: "The Importance of Self-Care",
       description: "How to take care of yourself and your mental health",
       image: "https://picsum.photos/450/250",
+      link: "https://www.therapytips.com/self-care",
     },
     {
       title: "The Importance of Self-Care",
       description: "How to take care of yourself and your mental health",
       image: "https://picsum.photos/450/250",
+      link: "https://www.therapytips.com/self-care",
     },
   ];
   return (
@@ -33,6 +37,7 @@ const SectionArticles = () => {
             title={article.title}
             description={article.description}
             image={article.image}
+            link={article.link}
           />
         ))}
       </div>
@@ -44,6 +49,7 @@ type Article = {
   title: string;
   description: string;
   image: string;
+  link: string;
 };
 
 const ArticleCard = (article: Article) => {
@@ -56,10 +62,14 @@ const ArticleCard = (article: Article) => {
         height={250}
         className="object-cover"
       />
-      <div className="flex flex-col items-center bg-(--therapy-tips)/22 p-2">
+      <a
+        href={article.link}
+        className="flex flex-col items-center bg-(--therapy-tips)/22 p-2
+      hover:bg-fuchsia-950 hover:cursor-pointer hover:text-white transition-all duration-200"
+      >
         <h2 className="text-sm font-bold">{article.title}</h2>
         <p className="text-xs">{article.description}</p>
-      </div>
+      </a>
     </div>
   );
 };

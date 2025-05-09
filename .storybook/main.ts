@@ -16,5 +16,9 @@ const config: StorybookConfig = {
     disableTelemetry: true,
   },
   staticDirs: ["../public", "../src/assets"],
+  managerHead: (head) => `
+    ${head}
+    TherapyTips
+  `,
 };
 export default config;
