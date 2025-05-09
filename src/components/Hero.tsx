@@ -1,5 +1,5 @@
 import ytImg from "../assets/yt-img.png";
-import ytButton from "../assets/yt-button.svg";
+import ytButton from "../assets/playbutton.png";
 
 const Hero = () => {
   return (
@@ -8,7 +8,9 @@ const Hero = () => {
       <img
         src={ytButton}
         alt="YT Button"
-        className="absolute place-self-center"
+        className="absolute place-self-center hover:opacity-70 transition-all duration-300"
+        width={150}
+        height={150}
       />
     </div>
   );

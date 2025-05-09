@@ -13,7 +13,7 @@ import { Separator } from "@/components/ui/separator";
 
 const LandingPage = () => {
   return (
-    <div className="flex flex-col w-[1200px] mx-auto m-4 border rounded-lg shadow-lg">
+    <div className="flex flex-col w-[1200px] mx-auto m-4 border rounded-lg shadow-lg bg-white">
       <Header />
       <main>
         <div className="flex gap-2 px-4 py-6 w-full">
