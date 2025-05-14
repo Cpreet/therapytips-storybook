@@ -18,7 +18,7 @@ const SectionAdvice = () => {
       <h1 className="text-5xl font-(family-name:--font-amaranth) font-bold tracking-wider text-(--therapy-tips)">
         ADVICE COLUMNS
       </h1>
-      <div className="flex flex-row gap-2">
+      <div className="grid grid-cols-2 gap-2 w-full p-1">
         {advice.map((item) => (
           <AdviceColumnItem key={item.title} advice={item} />
         ))}
@@ -36,12 +36,12 @@ type AdviceColumnItem = {
 
 const AdviceColumnItem = ({ advice }: { advice: AdviceColumnItem }) => {
   return (
-    <div className="flex flex-col">
-      <img src={advice.image} alt={advice.title} />
+    <div className="flex flex-col group">
+      <img src={advice.image} alt={advice.title} height={250} className="object-cover group-hover:cursor-pointer" />
       <a
         href={advice.link}
         className="flex flex-col text-center bg-(--therapy-tips)/22 p-2
-        hover:bg-fuchsia-950 hover:cursor-pointer hover:text-white transition-all duration-200"
+        group-hover:bg-fuchsia-950 group-hover:cursor-pointer group-hover:text-white transition-all duration-200"
       >
         <h2 className="text-sm font-bold">{advice.title}</h2>
         <p className="text-xs">{advice.description}</p>

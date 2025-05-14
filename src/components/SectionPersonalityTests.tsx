@@ -20,7 +20,7 @@ const SectionPersonalityTests = () => {
       <h1 className="text-5xl font-(family-name:--font-amaranth) font-bold tracking-wider text-(--therapy-tips)">
         FEATURED PERSONALITY TESTS
       </h1>
-      <div className="flex flex-row gap-2">
+      <div className="grid grid-cols-2 w-full gap-2 p-1">
         {tests.map((test) => (
           <PersonalityTestCard
             key={test.title}
@@ -44,12 +44,12 @@ type PersonalityTest = {
 
 const PersonalityTestCard = (test: PersonalityTest) => {
   return (
-    <div className="flex flex-col text-center">
-      <img src={test.image} alt={test.title} width={450} height={250} />
+    <div className="flex flex-col text-center group">
+      <img src={test.image} alt={test.title} height={250} className="object-cover group-hover:cursor-pointer" />
       <a
         href={test.link}
         className="flex flex-col bg-(--therapy-tips)/22 p-2
-        hover:bg-fuchsia-950 hover:cursor-pointer hover:text-white transition-all duration-200"
+        group-hover:bg-fuchsia-950 group-hover:cursor-pointer group-hover:text-white transition-all duration-200"
       >
         <h2 className="text-sm font-bold">{test.title}</h2>
         <p className="text-xs">{test.description}</p>

@@ -59,11 +59,10 @@ const AsideTrendingItem = ({ items }: { items: TrendingItem[] }) => {
           <li key={item.title}>
             <a href={item.link}>
               <div
-                className="flex items-end gap-2 font-normal font-(family-name:--font-amaranth) p-2
-                rounded-md
-              hover:cursor-pointer group
-              hover:bg-fuchsia-300 transition-all duration-300
-              "
+                className="flex items-end gap-2 font-normal font-(family-name:--font-amaranth) p-2 rounded-md 
+                hover:cursor-pointer hover:bg-fuchsia-300
+                transition-all duration-300 group
+                "
               >
                 <span className="text-5xl font-normal">{idx + 1}.</span>
                 <div className="flex flex-col font-sans text-fuchsia-950">
@@ -72,9 +71,10 @@ const AsideTrendingItem = ({ items }: { items: TrendingItem[] }) => {
                     {item.views} views this month{" "}
                     <TrendingUpIcon className="size-4" />
                     <ChevronRightIcon
-                      className="size-4
-                      opacity-0 group-hover:opacity-100 transition-all duration-300
-                    "
+                      className="size-4 opacity-0 
+                      group-hover:opacity-100 group-hover:translate-x-2
+                      transition-all duration-300
+                      "
                     />
                   </p>
                 </div>

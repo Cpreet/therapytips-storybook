@@ -30,7 +30,7 @@ const SectionArticles = () => {
       <h1 className="text-5xl font-(family-name:--font-amaranth) font-bold tracking-wider text-(--therapy-tips)">
         LATEST ARTICLES
       </h1>
-      <div className="grid grid-cols-2 gap-2">
+      <div className="grid grid-cols-2 gap-2 w-full p-1">
         {articles.map((article) => (
           <ArticleCard
             key={article.title}
@@ -54,18 +54,17 @@ type Article = {
 
 const ArticleCard = (article: Article) => {
   return (
-    <div className="flex flex-col size-full">
+    <div className="flex flex-col size-full group">
       <img
         src={article.image}
         alt={article.title}
-        width={450}
         height={250}
-        className="object-cover"
+        className="object-cover group-hover:cursor-pointer"
       />
       <a
         href={article.link}
         className="flex flex-col items-center bg-(--therapy-tips)/22 p-2
-      hover:bg-fuchsia-950 hover:cursor-pointer hover:text-white transition-all duration-200"
+      group-hover:bg-fuchsia-950 group-hover:cursor-pointer group-hover:text-white transition-all duration-200"
       >
         <h2 className="text-sm font-bold">{article.title}</h2>
         <p className="text-xs">{article.description}</p>
