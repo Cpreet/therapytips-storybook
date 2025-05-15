@@ -16,9 +16,11 @@ const config: StorybookConfig = {
     disableTelemetry: true,
   },
   staticDirs: ["../public", "../src/assets"],
-  managerHead: (head) => `
-    ${head}
-    TherapyTips
-  `,
+  managerHead: async (head) => {  
+    return `
+      ${head}
+      <link rel="icon" href="/logo.svg" type="image/svg" />
+    `;
+  }
 };
 export default config;

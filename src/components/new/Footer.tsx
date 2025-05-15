@@ -1,5 +1,5 @@
-import therapytips from "../assets/therapytips.svg";
-import bmc from "../assets/bmc.png";
+import therapytips from "@/assets/therapytips.svg";
+import bmc from "@/assets/bmc.png";
 
 const Footer = () => {
   return (

@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import LandingPage from "../pages/LandingPage";
+import LandingPage from "@/pages/original/LandingPage";
 
 const meta: Meta<typeof LandingPage> = {
-  title: "pages/LandingPage",
+  title: "pages/new/LandingPage",
   component: LandingPage,
   parameters: {
     layout: "fullscreen",

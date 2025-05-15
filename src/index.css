@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url('https://fonts.cdnfonts.com/css/avenir');
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -79,6 +80,7 @@
   --font-serif: "avenir", sans-serif;
   --font-sans: "avenir", sans-serif;
   --font-amaranth: "Amaranth", sans-serif;
+  --font-crimson: "Crimson Text", sans-serif;
   --therapy-tips: #801B6F;
 }
 
@@ -122,6 +124,5 @@
   }
   body {
     @apply bg-background text-foreground;
-    background-color: var(--color-fuchsia-50)
   }
 }

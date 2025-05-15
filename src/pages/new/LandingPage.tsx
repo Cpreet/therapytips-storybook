@@ -1,14 +1,14 @@
-import AsideJournal from "@/components/AsideJournal";
-import AsideTrending from "@/components/AsideTrending";
-import AsideVideos from "@/components/AsideVideos";
-import CTA from "@/components/CTA";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import SectionAdvice from "@/components/SectionAdvice";
-import SectionArticles from "@/components/SectionArticles";
-import SectionInterviews from "@/components/SectionInterviews";
-import SectionPersonlityTests from "@/components/SectionPersonalityTests";
+import AsideJournal from "@/components/new/AsideJournal";
+import AsideTrending from "@/components/new/AsideTrending";
+import AsideVideos from "@/components/new/AsideVideos";
+import CTA from "@/components/new/CTA";
+import Footer from "@/components/new/Footer";
+import Header from "@/components/new/Header";
+import Hero from "@/components/new/Hero";
+import SectionAdvice from "@/components/new/SectionAdvice";
+import SectionArticles from "@/components/new/SectionArticles";
+import SectionInterviews from "@/components/new/SectionInterviews";
+import SectionPersonlityTests from "@/components/new/SectionPersonalityTests";
 import { Separator } from "@/components/ui/separator";
 
 const LandingPage = () => {

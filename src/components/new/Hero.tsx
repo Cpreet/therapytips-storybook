@@ -1,5 +1,5 @@
-import ytImg from "../assets/yt-img.png";
-import ytButton from "../assets/playbutton.png";
+import ytImg from "@/assets/yt-img.png";
+import ytButton from "@/assets/playbutton.png";
 
 const Hero = () => {
   return (

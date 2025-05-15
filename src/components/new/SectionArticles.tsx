@@ -52,7 +52,7 @@ type Article = {
   link: string;
 };
 
-const ArticleCard = (article: Article) => {
+export const ArticleCard = (article: Article) => {
   return (
     <div className="flex flex-col size-full group">
       <img

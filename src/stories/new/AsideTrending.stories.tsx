@@ -1,9 +1,9 @@
 import type { Meta } from "@storybook/react";
 import type { StoryObj } from "@storybook/react";
-import AsideTrending from "../components/AsideTrending";
+import AsideTrending from "@/components/new/AsideTrending";
 
 const meta: Meta<typeof AsideTrending> = {
-  title: "components/AsideTrending",
+  title: "components/new/AsideTrending",
   component: AsideTrending,
   parameters: {
     layout: "centered",

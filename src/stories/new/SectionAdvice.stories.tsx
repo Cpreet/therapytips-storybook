@@ -1,13 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import Hero from "../components/Hero";
 
-const meta: Meta<typeof Hero> = {
-  title: "components/Hero",
-  component: Hero,
+import SectionAdvice from "@/components/new/SectionAdvice";
+
+const meta = {
+  title: "components/new/SectionAdvice",
+  component: SectionAdvice,
   parameters: {
     layout: "centered",
   },
-} satisfies Meta<typeof Hero>;
+} satisfies Meta<typeof SectionAdvice>;
 
 export default meta;
 

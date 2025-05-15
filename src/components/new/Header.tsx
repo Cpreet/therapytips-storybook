@@ -1,4 +1,4 @@
-import therapytips from "../assets/therapytips.svg";
+import therapytips from "@/assets/therapytips.svg";
 import { SearchIcon } from "lucide-react";
 
 const Header = () => {

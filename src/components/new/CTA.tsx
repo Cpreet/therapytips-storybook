@@ -1,4 +1,4 @@
-import bmc from "../assets/bmc.png";
+import bmc from "@/assets/bmc.png";
 
 const CTA = () => {
   return (

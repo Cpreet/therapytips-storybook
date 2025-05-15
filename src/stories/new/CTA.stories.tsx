@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import AsideVideos from "../components/AsideVideos";
+import CTA from "@/components/new/CTA";
 
-const meta: Meta<typeof AsideVideos> = {
-  title: "components/AsideVideos",
-  component: AsideVideos,
+const meta: Meta<typeof CTA> = {
+  title: "components/new/CTA",
+  component: CTA,
   parameters: {
     layout: "centered",
   },
-} satisfies Meta<typeof AsideVideos>;
+} satisfies Meta<typeof CTA>;
 
 export default meta;
 

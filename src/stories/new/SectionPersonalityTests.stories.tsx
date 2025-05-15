@@ -1,9 +1,9 @@
 import type { Meta } from "@storybook/react";
 import type { StoryObj } from "@storybook/react";
-import SectionPersonalityTests from "../components/SectionPersonalityTests";
+import SectionPersonalityTests from "@/components/new/SectionPersonalityTests";
 
 const meta: Meta<typeof SectionPersonalityTests> = {
-  title: "components/SectionPersonalityTests",
+  title: "components/new/SectionPersonalityTests",
   component: SectionPersonalityTests,
   parameters: {
     layout: "centered",

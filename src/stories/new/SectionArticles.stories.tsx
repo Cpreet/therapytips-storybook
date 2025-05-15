@@ -1,14 +1,14 @@
 import type { Meta } from "@storybook/react";
 import type { StoryObj } from "@storybook/react";
-import AsideJournal from "../components/AsideJournal";
+import SectionArticles from "@/components/new/SectionArticles";
 
-const meta: Meta<typeof AsideJournal> = {
-  title: "components/AsideJournal",
-  component: AsideJournal,
+const meta: Meta<typeof SectionArticles> = {
+  title: "components/new/SectionArticles",
+  component: SectionArticles,
   parameters: {
     layout: "centered",
   },
-} satisfies Meta<typeof AsideJournal>;
+} satisfies Meta<typeof SectionArticles>;
 
 export default meta;
 

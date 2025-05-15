@@ -1,5 +1,5 @@
-import thumbnail1 from "../assets/thumbnail1.png";
-import thumbnail2 from "../assets/thumbnail2.png";
+import thumbnail1 from "@/assets/thumbnail1.png";
+import thumbnail2 from "@/assets/thumbnail2.png";
 
 const AsideVideos = () => {
   return (

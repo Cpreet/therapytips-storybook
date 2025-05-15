@@ -1,14 +1,14 @@
+import SectionInterviews from "@/components/new/SectionInterviews";
 import type { Meta } from "@storybook/react";
 import type { StoryObj } from "@storybook/react";
-import SectionArticles from "../components/SectionArticles";
 
-const meta: Meta<typeof SectionArticles> = {
-  title: "components/SectionArticles",
-  component: SectionArticles,
+const meta: Meta<typeof SectionInterviews> = {
+  title: "components/new/SectionInterviews",
+  component: SectionInterviews,
   parameters: {
     layout: "centered",
   },
-} satisfies Meta<typeof SectionArticles>;
+} satisfies Meta<typeof SectionInterviews>;
 
 export default meta;
 

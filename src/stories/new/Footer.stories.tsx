@@ -1,13 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import CTA from "../components/CTA";
 
-const meta: Meta<typeof CTA> = {
-  title: "components/CTA",
-  component: CTA,
+import Footer from "@/components/new/Footer";
+
+const meta = {
+  title: "components/new/Footer",
+  component: Footer,
   parameters: {
     layout: "centered",
   },
-} satisfies Meta<typeof CTA>;
+} satisfies Meta<typeof Footer>;
 
 export default meta;
 

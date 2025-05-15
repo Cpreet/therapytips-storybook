@@ -1,4 +1,4 @@
-import scales from "../assets/scales.png";
+import scales from "@/assets/scales.png";
 
 const SectionPersonalityTests = () => {
   const tests = [
