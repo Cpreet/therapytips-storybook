@@ -1,4 +1,7 @@
+import useMobile from "@/hooks/useMobile";
+
 const SectionArticles = () => {
+  const isMobile = useMobile();
   const articles = [
     {
       title: "The Importance of Self-Care",
@@ -26,21 +29,43 @@ const SectionArticles = () => {
     },
   ];
   return (
-    <section className="flex flex-col gap-8 items-center">
-      <h1 className="text-5xl font-(family-name:--font-amaranth) font-bold tracking-wider text-(--therapy-tips)">
-        LATEST ARTICLES
-      </h1>
-      <div className="grid grid-cols-2 gap-2 w-full p-1">
-        {articles.map((article) => (
-          <ArticleCard
-            key={article.title}
-            title={article.title}
-            description={article.description}
-            image={article.image}
-            link={article.link}
-          />
-        ))}
-      </div>
+    <section className="flex flex-col gap-1 md:gap-8 items-center">
+      {!isMobile && (
+        <>
+          <h1 className="text-5xl font-(family-name:--font-amaranth) font-bold tracking-wider text-(--therapy-tips) text-center">
+            LATEST ARTICLES
+          </h1>
+          <div className="grid grid-cols-2 gap-2 w-full p-1">
+            {articles.map((article) => (
+              <ArticleCard
+                key={article.title}
+                title={article.title}
+                description={article.description}
+                image={article.image}
+                link={article.link}
+              />
+            ))}
+          </div>
+        </>
+      )}
+      {isMobile && (
+        <>
+          <h1 className="text-3xl font-(family-name:--font-amaranth) font-bold tracking-wider text-(--therapy-tips) text-center">
+            LATEST ARTICLES
+          </h1>
+          <div className="grid grid-cols-1 gap-2 w-full p-2">
+            {articles.map((article) => (
+              <ArticleCard
+                key={article.title}
+                title={article.title}
+                description={article.description}
+                image={article.image}
+                link={article.link}
+              />
+            ))}
+          </div>
+        </>
+      )}
     </section>
   );
 };

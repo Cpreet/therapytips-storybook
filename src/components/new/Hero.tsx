@@ -3,7 +3,7 @@ import ytButton from "@/assets/playbutton.png";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col items-center justify-center w-full pr-1">
+    <div className="flex flex-col items-center justify-center w-full pr-0 md:pr-1">
       <img src={ytImg} alt="Hero" className="size-full" />
       <img
         src={ytButton}

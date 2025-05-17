@@ -1,7 +1,7 @@
-import AsideJournal from "@/components/original/AsideJournal";
-import AsideTrending from "@/components/original/AsideTrending";
-import AsideVideos from "@/components/original/AsideVideos";
-import CTA from "@/components/original/CTA";
+// import AsideJournal from "@/components/original/AsideJournal";
+// import AsideTrending from "@/components/original/AsideTrending";
+// import AsideVideos from "@/components/original/AsideVideos";
+// import CTA from "@/components/original/CTA";
 import Footer from "@/components/original/Footer";
 import Header from "@/components/original/Header";
 import Hero from "@/components/original/Hero";
