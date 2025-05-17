@@ -100,7 +100,7 @@ const AsideTrendingItem = ({ items }: { items: TrendingItem[] }) => {
           {items.map((item, idx) => (
             <li key={item.title}>
               <a href={item.link}>
-                <div className="flex items-center justify-between bg-fuchsia-200 px-4 py-1 font-sans text-fuchsia-950">
+                <div className="flex items-center justify-between bg-fuchsia-100 px-4 py-1 font-sans text-fuchsia-950">
                   <div className="flex items-center gap-2">
                     <span className="text-4xl font-extralight font-(family-name:--font-amaranth)">
                       {idx + 1}.
@@ -109,14 +109,15 @@ const AsideTrendingItem = ({ items }: { items: TrendingItem[] }) => {
                       <h2 className="text-sm font-bold">{item.title}</h2>
                       <p className="text-xs font-normal flex items-center gap-1">
                         {item.views} views this month{" "}
-                        <TrendingUpIcon
-                          className="size-4"
-                          absoluteStrokeWidth
-                        />
+                        <TrendingUpIcon className="size-4" />
                       </p>
                     </div>
                   </div>
-                  <ChevronRightIcon className="size-12" color="gray" />
+                  <ChevronRightIcon
+                    className="size-14"
+                    color="gray"
+                    strokeWidth={1}
+                  />
                 </div>
               </a>
             </li>
