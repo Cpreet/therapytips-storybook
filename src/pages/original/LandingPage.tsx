@@ -1,6 +1,6 @@
 // import AsideJournal from "@/components/original/AsideJournal";
-// import AsideTrending from "@/components/original/AsideTrending";
-// import AsideVideos from "@/components/original/AsideVideos";
+import AsideTrending from "@/components/original/AsideTrending";
+import AsideVideos from "@/components/original/AsideVideos";
 // import CTA from "@/components/original/CTA";
 import Footer from "@/components/original/Footer";
 import Header from "@/components/original/Header";
@@ -23,7 +23,8 @@ const LandingPage = () => {
               <SectionPersonlityTests />
               <SectionInterviews />
               <SectionAdvice />
-              <Footer />
+              <AsideVideos />
+              <AsideTrending />
             </div>
             {/* <div className="relative">
               <div className="absolute inset-y-0 left-0 w-px bg-fuchsia-950/35"></div>
@@ -48,6 +49,7 @@ const LandingPage = () => {
             </div> */}
           </div>
         </main>
+        <Footer />
       </div>
     </>
   );
