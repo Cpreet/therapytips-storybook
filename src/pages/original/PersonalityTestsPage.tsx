@@ -12,16 +12,17 @@ const PersonalityTestsPage = ({ aside = false }: { aside: boolean }) => {
   const articles = [...Array(16).keys()].map(() => ({
     title: "title",
     description: "description",
-    image: "https://picsum.photos/450/250",
-    link: "#"
-  }))
-  console.log(articles)
+    image:
+      "https://wallpapers.com/images/hd/vibrant-mountain-lake-scenic-yif3zbqokb0oq5yw.jpg",
+    link: "#",
+  }));
+  console.log(articles);
   return (
     <div className="w-[940px] mx-auto m-2 rounded-lg bg-white">
       <Header />
       <main>
         <div className="px-4 py-2 w-full">
-         <div className={"space-y-2" + (aside ? " w-4/5" : " w-full")}>
+          <div className={"space-y-2" + (aside ? " w-4/5" : " w-full")}>
             <Hero />
             <h1
               className="grid grid-cols-[1fr_auto_1fr] items-center gap-4 w-full
@@ -62,12 +63,11 @@ const PersonalityTestsPage = ({ aside = false }: { aside: boolean }) => {
                 <CTA />
               </div>
             </>
-          )
-          }
+          )}
         </div>
       </main>
     </div>
-  )
-}
+  );
+};
 
 export default PersonalityTestsPage;

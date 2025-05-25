@@ -12,7 +12,8 @@ const AdvicePage = ({ aside = false }: { aside: boolean }) => {
   const articles = [...Array(16).keys()].map(() => ({
     title: "title",
     description: "description",
-    image: "https://picsum.photos/450/250",
+    image:
+      "https://wallpapers.com/images/hd/vibrant-mountain-lake-scenic-yif3zbqokb0oq5yw.jpg",
     link: "#",
   }));
   console.log(articles);
@@ -21,12 +22,7 @@ const AdvicePage = ({ aside = false }: { aside: boolean }) => {
       <Header />
       <main>
         <div className="px-4 py-2 w-full space-y-2">
-          <div
-            className={
-              "space-y-2" +
-              (aside ? " w-4/5" : " w-full")
-            }
-          >
+          <div className={"space-y-2" + (aside ? " w-4/5" : " w-full")}>
             <Hero />
             <h1
               className="grid grid-cols-[1fr_auto_1fr] items-center gap-4 w-full

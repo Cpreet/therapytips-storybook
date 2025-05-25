@@ -12,7 +12,8 @@ const InterviewsPage = ({ aside = false }: { aside: boolean }) => {
   const articles = [...Array(16).keys()].map(() => ({
     title: "title",
     description: "description",
-    image: "https://picsum.photos/450/250",
+    image:
+      "https://wallpapers.com/images/hd/vibrant-mountain-lake-scenic-yif3zbqokb0oq5yw.jpg",
     link: "#",
   }));
   console.log(articles);

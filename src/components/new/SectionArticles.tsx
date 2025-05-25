@@ -1,78 +1,71 @@
-import useMobile from "@/hooks/useMobile";
-
 const SectionArticles = () => {
-  const isMobile = useMobile();
   const articles = [
     {
-      title: "The Importance of Self-Care",
-      description: "How to take care of yourself and your mental health",
-      image: "https://picsum.photos/450/250",
-      link: "https://www.therapytips.com/self-care",
+      title:
+        "The Personality Trait You Didn't Know Was Impacting Your Sex Life",
+      image:
+        "https://therapytips.org/photos/16x9/young-attractive-happy-couple-having-romantic-time-in-bed-by-getty-images-16x9.jpg",
+      link: "https://therapytips.org/articles/the-personality-trait-you-didnt-know-was-impacting-your-sex-life",
     },
     {
-      title: "The Importance of Self-Care",
-      description: "How to take care of yourself and your mental health",
-      image: "https://picsum.photos/450/250",
-      link: "https://www.therapytips.com/self-care",
+      title: "6 Stations Of Divorce Most Couples Go Through",
+      image:
+        "https://therapytips.org/photos/16x9/a-man-and-a-woman-sitting-at-a-table-by-gabriel-ponton-16x9.jpg",
+      link: "https://therapytips.org/articles/6-stations-of-divorce-most-couples-go-through",
     },
     {
-      title: "The Importance of Self-Care",
-      description: "How to take care of yourself and your mental health",
-      image: "https://picsum.photos/450/250",
-      link: "https://www.therapytips.com/self-care",
+      title:
+        "Why Being Best Friends With Your Partner May Be The Key To Lasting Love",
+      image:
+        "https://therapytips.org/photos/16x9/a-man-and-a-woman-looking-at-each-other-laughing-by-aliburhan-s-16x9.jpg",
+      link: "https://therapytips.org/articles/why-being-best-friends-with-your-partner-may-be-the-key-to-lasting-love",
     },
     {
-      title: "The Importance of Self-Care",
-      description: "How to take care of yourself and your mental health",
-      image: "https://picsum.photos/450/250",
-      link: "https://www.therapytips.com/self-care",
+      title:
+        "3 Texting 'Red Flags' That Show They Are Not Emotionally Available",
+      image:
+        "https://therapytips.org/photos/16x9/person-in-grey-sweater-wearing-black-and-silver-chronograph-watch-holding-a-cell-phone-by-nathan-dumalo-16x9.jpg",
+      link: "https://therapytips.org/articles/3-texting-red-flags-that-show-they-are-not-emotionally-available",
     },
   ];
   return (
     <section className="flex flex-col gap-1 md:gap-8 items-center">
-      {!isMobile && (
-        <>
-          <h1 className="text-5xl font-(family-name:--font-amaranth) font-bold tracking-wider text-(--therapy-tips) text-center">
-            LATEST ARTICLES
-          </h1>
-          <div className="grid grid-cols-2 gap-2 w-full p-1">
-            {articles.map((article) => (
-              <ArticleCard
-                key={article.title}
-                title={article.title}
-                description={article.description}
-                image={article.image}
-                link={article.link}
-              />
-            ))}
-          </div>
-        </>
-      )}
-      {isMobile && (
-        <>
-          <h1 className="text-3xl font-(family-name:--font-amaranth) font-bold tracking-wider text-(--therapy-tips) text-center">
-            LATEST ARTICLES
-          </h1>
-          <div className="grid grid-cols-1 gap-2 w-full p-2">
-            {articles.map((article) => (
-              <ArticleCard
-                key={article.title}
-                title={article.title}
-                description={article.description}
-                image={article.image}
-                link={article.link}
-              />
-            ))}
-          </div>
-        </>
-      )}
+      <div className="hidden md:block w-full">
+        <h1 className="text-5xl font-(family-name:--font-amaranth) font-bold tracking-wider text-(--therapy-tips) text-center">
+          LATEST ARTICLES
+        </h1>
+        <div className="grid grid-cols-2 gap-2 w-full p-1">
+          {articles.map((article) => (
+            <ArticleCard
+              key={article.title}
+              title={article.title}
+              image={article.image}
+              link={article.link}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="block md:hidden">
+        <h1 className="text-3xl font-(family-name:--font-amaranth) font-bold tracking-wider text-(--therapy-tips) text-center">
+          LATEST ARTICLES
+        </h1>
+        <div className="grid grid-cols-1 gap-2 w-full p-2">
+          {articles.map((article) => (
+            <ArticleCard
+              key={article.title}
+              title={article.title}
+              image={article.image}
+              link={article.link}
+            />
+          ))}
+        </div>
+      </div>
     </section>
   );
 };
 
 type Article = {
   title: string;
-  description: string;
   image: string;
   link: string;
 };
@@ -92,7 +85,6 @@ export const ArticleCard = (article: Article) => {
       group-hover:bg-fuchsia-950 group-hover:cursor-pointer group-hover:text-white transition-all duration-200"
       >
         <h2 className="text-sm font-bold">{article.title}</h2>
-        <p className="text-xs">{article.description}</p>
       </a>
     </div>
   );

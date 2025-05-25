@@ -3,13 +3,15 @@ const SectionAdvice = () => {
     {
       title: "Advice Column 1",
       description: "Advice Column 1",
-      image: "https://picsum.photos/450/250",
+      image:
+        "https://wallpapers.com/images/hd/vibrant-mountain-lake-scenic-yif3zbqokb0oq5yw.jpg",
       link: "https://www.therapytips.com/self-care",
     },
     {
       title: "Advice Column 2",
       description: "Advice Column 2",
-      image: "https://picsum.photos/450/250",
+      image:
+        "https://wallpapers.com/images/hd/vibrant-mountain-lake-scenic-yif3zbqokb0oq5yw.jpg",
       link: "https://www.therapytips.com/self-care",
     },
   ];
@@ -41,7 +43,12 @@ type AdviceColumnItem = {
 const AdviceColumnItem = ({ advice }: { advice: AdviceColumnItem }) => {
   return (
     <div className="flex flex-col group">
-      <img src={advice.image} alt={advice.title} height={250} className="object-cover group-hover:cursor-pointer" />
+      <img
+        src={advice.image}
+        alt={advice.title}
+        height={250}
+        className="object-cover group-hover:cursor-pointer"
+      />
       <a
         href={advice.link}
         className="flex flex-col text-center bg-blue-100 p-2 font-(family-name:--font-crimson) text-blue-900 rounded-b-md

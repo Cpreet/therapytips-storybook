@@ -3,25 +3,29 @@ const SectionArticles = () => {
     {
       title: "The Importance of Self-Care",
       description: "How to take care of yourself and your mental health",
-      image: "https://picsum.photos/450/250",
+      image:
+        "https://wallpapers.com/images/hd/vibrant-mountain-lake-scenic-yif3zbqokb0oq5yw.jpg",
       link: "https://www.therapytips.com/self-care",
     },
     {
       title: "The Importance of Self-Care",
       description: "How to take care of yourself and your mental health",
-      image: "https://picsum.photos/450/250",
+      image:
+        "https://wallpapers.com/images/hd/vibrant-mountain-lake-scenic-yif3zbqokb0oq5yw.jpg",
       link: "https://www.therapytips.com/self-care",
     },
     {
       title: "The Importance of Self-Care",
       description: "How to take care of yourself and your mental health",
-      image: "https://picsum.photos/450/250",
+      image:
+        "https://wallpapers.com/images/hd/vibrant-mountain-lake-scenic-yif3zbqokb0oq5yw.jpg",
       link: "https://www.therapytips.com/self-care",
     },
     {
       title: "The Importance of Self-Care",
       description: "How to take care of yourself and your mental health",
-      image: "https://picsum.photos/450/250",
+      image:
+        "https://wallpapers.com/images/hd/vibrant-mountain-lake-scenic-yif3zbqokb0oq5yw.jpg",
       link: "https://www.therapytips.com/self-care",
     },
   ];

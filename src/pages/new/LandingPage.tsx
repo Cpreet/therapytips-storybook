@@ -10,20 +10,19 @@ import SectionArticles from "@/components/new/SectionArticles";
 import SectionInterviews from "@/components/new/SectionInterviews";
 import SectionPersonlityTests from "@/components/new/SectionPersonalityTests";
 import { Separator } from "@/components/ui/separator";
-import useMobile from "@/hooks/useMobile";
+import BaseHead from "@/components/new/BaseHead";
 
 const LandingPage = () => {
-  const isMobile = useMobile();
-
   return (
-    <div className="flex flex-col max-w-[1400px] md:m-4 xl:mx-auto border rounded-lg shadow-lg bg-white">
-      <Header />
-      <main>
-        <div className="flex py-2 md:py-6 w-full">
-          <div className="flex flex-col w-full md:w-4/5 gap-4 md:gap-8 md:px-3">
-            <Hero />
-            {isMobile && (
-              <>
+    <>
+      <BaseHead />
+      <div className="flex flex-col max-w-[1400px] md:m-4 xl:mx-auto border rounded-lg shadow-lg bg-white">
+        <Header />
+        <main>
+          <div className="flex py-2 md:py-6 w-full">
+            <div className="flex flex-col w-full md:w-4/5 gap-4 md:gap-8 md:px-3">
+              <Hero />
+              <div className="flex md:hidden flex-col gap-4 w-full">
                 <AsideJournal />
                 <Separator
                   orientation="horizontal"
@@ -34,41 +33,44 @@ const LandingPage = () => {
                   orientation="horizontal"
                   className="bg-fuchsia-950/35"
                 />
-              </>
-            )}
-            <SectionArticles />
-            <Separator orientation="horizontal" className="bg-fuchsia-950/35" />
-            {isMobile && (
-              <>
+              </div>
+              <SectionArticles />
+              <Separator
+                orientation="horizontal"
+                className="bg-fuchsia-950/35"
+              />
+              <div className="flex md:hidden flex-col gap-4 w-full">
                 <CTA />
                 <Separator
                   orientation="horizontal"
                   className="bg-fuchsia-950/35"
                 />
-              </>
-            )}
-            <SectionPersonlityTests />
-            <Separator orientation="horizontal" className="bg-fuchsia-950/35" />
-            <SectionInterviews />
-            <Separator orientation="horizontal" className="bg-fuchsia-950/35" />
-            <SectionAdvice />
-            {isMobile && (
-              <>
+              </div>
+              <SectionPersonlityTests />
+              <Separator
+                orientation="horizontal"
+                className="bg-fuchsia-950/35"
+              />
+              <SectionInterviews />
+              <Separator
+                orientation="horizontal"
+                className="bg-fuchsia-950/35"
+              />
+              <SectionAdvice />
+              <div className="flex md:hidden flex-col gap-4 w-full">
                 <Separator
                   orientation="horizontal"
                   className="bg-fuchsia-950/35"
                 />
                 <AsideVideos />
-              </>
-            )}
-            <Footer />
-          </div>
-          {!isMobile && (
-            <>
+              </div>
+              <Footer />
+            </div>
+            <div className="hidden md:flex w-1/5">
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 w-px bg-fuchsia-950/35"></div>
               </div>
-              <div className="flex flex-col gap-4 w-1/5 md:px-3">
+              <div className="flex flex-col gap-4 md:px-3">
                 <AsideTrending />
                 <Separator
                   orientation="horizontal"
@@ -86,11 +88,11 @@ const LandingPage = () => {
                 />
                 <CTA />
               </div>
-            </>
-          )}
-        </div>
-      </main>
-    </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </>
   );
 };
 

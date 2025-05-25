@@ -3,25 +3,29 @@ const SectionInterviews = () => {
     {
       title: "Interview 1",
       description: "Description of Interview 1",
-      image: "https://picsum.photos/450/250",
+      image:
+        "https://wallpapers.com/images/hd/vibrant-mountain-lake-scenic-yif3zbqokb0oq5yw.jpg",
       link: "https://www.therapytips.com/self-care",
     },
     {
       title: "Interview 2",
       description: "Description of Interview 2",
-      image: "https://picsum.photos/450/250",
+      image:
+        "https://wallpapers.com/images/hd/vibrant-mountain-lake-scenic-yif3zbqokb0oq5yw.jpg",
       link: "https://www.therapytips.com/self-care",
     },
     {
       title: "Interview 3",
       description: "Description of Interview 3",
-      image: "https://picsum.photos/450/250",
+      image:
+        "https://wallpapers.com/images/hd/vibrant-mountain-lake-scenic-yif3zbqokb0oq5yw.jpg",
       link: "https://www.therapytips.com/self-care",
     },
     {
       title: "Interview 4",
       description: "Description of Interview 4",
-      image: "https://picsum.photos/450/250",
+      image:
+        "https://wallpapers.com/images/hd/vibrant-mountain-lake-scenic-yif3zbqokb0oq5yw.jpg",
       link: "https://www.therapytips.com/self-care",
     },
   ];

@@ -43,20 +43,20 @@ const Footer = () => {
           </strong>{" "}
         </p>
         <a
-          href="https://www.therapytips.org"
+          href="https://therapytips.org/weekly-wisdom-signup"
           target="_blank"
           className="underline hover:cursor-pointer text-sm md:text-base"
         >
           JOIN OUR 'WEEKLY JOURNAL PROMPT' MAILING LIST
         </a>
         <a
-          href="https://www.therapytips.org"
+          href="https://www.awake-therapy.me/schedule-an-initial-consultation"
           target="_blank"
           className="underline hover:cursor-pointer text-sm md:text-base"
         >
           TALK TO A MENTAL HEALTH PROFESSIONAL TODAY
         </a>
-        <a href="https://www.buymeacoffee.com/awake" target="_blank">
+        <a href="https://www.buymeacoffee.com/marktravers" target="_blank">
           <img
             src={bmc}
             alt="BMC"
@@ -66,7 +66,7 @@ const Footer = () => {
         </a>
       </div>
       <p className="text-xs text-fuchsia-950 font-extralight text-center py-2">
-        2025 Psychology Solutions, Inc. All rights reserved.
+        &copy; 2025 Psychology Solutions, Inc. All rights reserved.
       </p>
     </footer>
   );

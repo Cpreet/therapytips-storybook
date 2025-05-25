@@ -1,17 +1,15 @@
-import ytImg from "@/assets/yt-img.png";
-import ytButton from "@/assets/playbutton.png";
-
 const Hero = () => {
   return (
-    <div className="flex flex-col items-center justify-center w-full pr-0 md:pr-1">
-      <img src={ytImg} alt="Hero" className="size-full" />
-      <img
-        src={ytButton}
-        alt="YT Button"
-        className="absolute place-self-center hover:opacity-70 transition-all duration-300"
-        width={150}
-        height={150}
-      />
+    <div className="flex flex-col items-center justify-center w-full pr-0 md:pr-1 h-[300px] sm:h-[300px] md:h-[400px] lg:h-[600px]">
+      <iframe
+        className="w-full h-full"
+        src="https://www.youtube.com/embed/X9ootQNBzzY?si=xDzqaF1KsoPx_XBv"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+      ></iframe>
     </div>
   );
 };

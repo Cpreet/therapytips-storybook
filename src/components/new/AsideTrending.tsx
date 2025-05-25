@@ -1,54 +1,52 @@
-import useMobile from "@/hooks/useMobile";
 import { ChevronRightIcon, TrendingUpIcon } from "lucide-react";
 
 const AsideTrending = () => {
-  const isMobile = useMobile();
   const items = [
     {
-      title: "Marital Satisfaction Scale",
-      views: 100,
-      link: "https://www.therapytips.com/self-care",
+      title: "Highly Sensitive Person Questionnaire",
+      views: 4156,
+      link: "https://therapytips.org/personality-tests/highly-sensitive-person-questionnaire",
     },
     {
-      title: "Breakup Distress Scale",
-      views: 200,
-      link: "https://www.therapytips.com/self-care",
+      title: "Authneticity In Relationships",
+      views: 2217,
+      link: "https://therapytips.org/personality-tests/authenticity-in-realationships",
+    },
+    {
+      title: "Relationship Flourishing Scale",
+      views: 1381,
+      link: "https://therapytips.org/personality-tests/relationship-flourishing-scale",
     },
     {
       title: "Relationship Satisfaction Scale",
-      views: 300,
+      views: 1282,
       link: "https://www.therapytips.com/self-care",
     },
     {
-      title: "Parentification Scale",
-      views: 400,
-      link: "https://www.therapytips.com/self-care",
+      title: "Perceived Responsiveness Scale",
+      views: 1063,
+      link: "https://therapytips.org/personality-tests/perceived-responsiveness-scale",
     },
     {
-      title: "Authenticity in Relationships Scale",
-      views: 500,
-      link: "https://www.therapytips.com/self-care",
-    },
-    {
-      title: "Fear of Intimacy Scale",
-      views: 600,
-      link: "https://www.therapytips.com/self-care",
+      title: "Marital Satisfaction Scale",
+      views: 848,
+      link: "https://therapytips.org/personality-tests/marital-satisfaction-scale",
     },
   ];
   return (
     <aside className="flex flex-col pl-2 gap-1 md:gap-10 text-(--therapy-tips)">
-      {!isMobile && (
+      <div className="hidden md:block">
         <h1 className="text-5xl font-(family-name:--font-amaranth) font-bold tracking-wider">
           MOST
           <br />
           POPULAR
         </h1>
-      )}
-      {isMobile && (
+      </div>
+      <div className="md:hidden">
         <h1 className="text-3xl font-(family-name:--font-amaranth) font-bold tracking-wider text-center">
           MOST POPULAR
         </h1>
-      )}
+      </div>
       <AsideTrendingItem items={items} />
     </aside>
   );
@@ -61,10 +59,9 @@ type TrendingItem = {
 };
 
 const AsideTrendingItem = ({ items }: { items: TrendingItem[] }) => {
-  const isMobile = useMobile();
   return (
     <div className="flex flex-col w-full">
-      {!isMobile && (
+      <div className="hidden md:block">
         <ol className="flex flex-col gap-8">
           {items.map((item, idx) => (
             <li key={item.title}>
@@ -94,8 +91,8 @@ const AsideTrendingItem = ({ items }: { items: TrendingItem[] }) => {
             </li>
           ))}
         </ol>
-      )}
-      {isMobile && (
+      </div>
+      <div className="block md:hidden">
         <ol className="flex flex-col gap-2 pr-2">
           {items.map((item, idx) => (
             <li key={item.title}>
@@ -123,7 +120,7 @@ const AsideTrendingItem = ({ items }: { items: TrendingItem[] }) => {
             </li>
           ))}
         </ol>
-      )}
+      </div>
     </div>
   );
 };

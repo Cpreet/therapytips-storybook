@@ -1,68 +1,56 @@
 import scales from "@/assets/scales.png";
-import useMobile from "@/hooks/useMobile";
 
 const SectionPersonalityTests = () => {
-  const isMobile = useMobile();
-
   const tests = [
     {
-      title: "Personality Test 1",
-      description: "Description of Personality Test 1",
+      title: "Flourishing Measure",
       image: scales,
-      link: "https://www.therapytips.com/self-care",
+      link: "https://therapytips.org/personality-tests/flourishing-measure",
     },
     {
-      title: "Personality Test 2",
-      description: "Description of Personality Test 2",
+      title: "Anger Management Scale",
       image: scales,
-      link: "https://www.therapytips.com/self-care",
+      link: "https://therapytips.org/personality-tests/anger-management-scale",
     },
   ];
   return (
     <section className="flex flex-col gap-2 md:gap-8 items-center">
-      {!isMobile && (
-        <>
-          <h1 className="text-5xl font-(family-name:--font-amaranth) font-bold tracking-wider text-(--therapy-tips)">
-            FEATURED PERSONALITY TESTS
-          </h1>
-          <div className="grid grid-cols-2 w-full gap-2 p-1">
-            {tests.map((test) => (
-              <PersonalityTestCard
-                key={test.title}
-                title={test.title}
-                description={test.description}
-                image={test.image}
-                link={test.link}
-              />
-            ))}
-          </div>
-        </>
-      )}
-      {isMobile && (
-        <>
-          <h1 className="text-3xl font-(family-name:--font-amaranth) font-bold tracking-wider text-(--therapy-tips) text-center">
-            FEATURED <br /> PERSONALITY TESTS
-          </h1>
-          <div className="grid grid-cols-1 w-full gap-2 p-2">
-            {tests.map((test) => (
-              <PersonalityTestCard
-                key={test.title}
-                title={test.title}
-                description={test.description}
-                image={test.image}
-                link={test.link}
-              />
-            ))}
-          </div>
-        </>
-      )}
+      <div className="hidden md:block w-full">
+        <h1 className="text-5xl font-(family-name:--font-amaranth) font-bold tracking-wider text-(--therapy-tips) text-center">
+          FEATURED PERSONALITY TESTS
+        </h1>
+        <div className="grid grid-cols-2 w-full gap-2 p-1">
+          {tests.map((test) => (
+            <PersonalityTestCard
+              key={test.title}
+              title={test.title}
+              image={test.image}
+              link={test.link}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="block md:hidden">
+        <h1 className="text-3xl font-(family-name:--font-amaranth) font-bold tracking-wider text-(--therapy-tips) text-center">
+          FEATURED <br /> PERSONALITY TESTS
+        </h1>
+        <div className="grid grid-cols-1 w-full gap-2 p-2">
+          {tests.map((test) => (
+            <PersonalityTestCard
+              key={test.title}
+              title={test.title}
+              image={test.image}
+              link={test.link}
+            />
+          ))}
+        </div>
+      </div>
     </section>
   );
 };
 
 type PersonalityTest = {
   title: string;
-  description: string;
   image: string;
   link: string;
 };
@@ -82,7 +70,6 @@ const PersonalityTestCard = (test: PersonalityTest) => {
         group-hover:bg-fuchsia-950 group-hover:cursor-pointer group-hover:text-white transition-all duration-200"
       >
         <h2 className="text-sm font-bold">{test.title}</h2>
-        <p className="text-xs">{test.description}</p>
       </a>
     </div>
   );

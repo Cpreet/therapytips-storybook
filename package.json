@@ -5,11 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "hb:ssg": "bun --importmap=import_map.json render.ts",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "tailwindgen": "bunx --bun @tailwindcss/cli -i ./src/index.css -o ./src/output.css --watch"
   },
   "dependencies": {
     "@faker-js/faker": "^9.7.0",
