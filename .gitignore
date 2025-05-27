@@ -27,3 +27,5 @@ dist-ssr
 storybook-static
 
 local_scripts
+photos
+photos/*

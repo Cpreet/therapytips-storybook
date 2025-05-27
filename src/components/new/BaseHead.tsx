@@ -1,6 +1,6 @@
 const BaseHead = () => {
   return (
-    <head>
+    <>
       <title>Therapytips.org - Your Guide To A Happier Future</title>
       <meta
         name="description"
@@ -30,7 +30,7 @@ const BaseHead = () => {
         sizes="16x16"
         href="/favicon-16x16.png"
       />
-      <link rel="preload" href="./styles.css" as="stylesheet" />
+      <link rel="preload" href="/styles.css" as="stylesheet" />
       <link rel="manifest" href="/site.webmanifest" />
       <link
         href="https://fonts.googleapis.com/css2?family=Crimson+Text&amp;display=swap"
@@ -58,7 +58,7 @@ const BaseHead = () => {
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-8W1FCM72H7"
       ></script>
-      <link rel="stylesheet" type="text/css" href="./styles.css" />
+      <link rel="stylesheet" type="text/css" href="/styles.css" />
       <script
         dangerouslySetInnerHTML={{
           __html: `
@@ -109,7 +109,7 @@ const BaseHead = () => {
         async
         src="https://fundingchoicesmessages.google.com/f/AGSKWxVCnPn9tgOxUOA5wz_UMZRDcPCRYpVkDnf050fzSMFxv4i2iiD_OmAevNUnxrmJRD3_mCUSxUUqjQ9jypiQal7W0C1lVPJendPGx3YvGipuPPJTHVKya2QAN23otO60IhkIzqhiIA==?fccs=W1siQUtzUm9sOFd3bDVQendvY2FocVFNcVluUVR2WFZ5dXo1cE9uOGdNSGxqbkh6VXotYWR0QTh4ZWROdE5wMXF3RDFHc1VOUWMwZEM0SDNIeU1tdlJSSGxSY3JXdGR0cEhPRmRmZWJYUUdtVWlPNS14YWMyRnhDT2kzVzM5NHlZTXdnRGpQWHRsZGIxSkF6SHlvSl8tcmpLSTBYRVhHTk9fR0JRPT0iXSxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsWzE3NDgwOTgxNzIsNjAzMDAwMDAwXSxudWxsLG51bGwsbnVsbCxbbnVsbCxbNyw2LDEwLDldLG51bGwsMixudWxsLCJlbiIsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLDFdLCJodHRwczovL3RoZXJhcHl0aXBzLm9yZy8iLG51bGwsW1s4LCJvYUs3YUZvX2YtVSJdLFs5LCJlbi1HQiJdLFsyMywiMTc0NTkxMDQ2NiJdLFsxOSwiMiJdLFsyNCwiIl0sWzI5LCJmYWxzZSJdXV0"
       />
-    </head>
+    </>
   );
 };
 

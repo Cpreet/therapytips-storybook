@@ -67,7 +67,7 @@ const ArticleMain = () => {
             Take the{" "}
           </em>
           <a
-            href="https://therapytips.org/personality-tests/active-empathic-listening-scale"
+            href=`${process.env.BASE_URL}/personality-tests/active-empathic-listening-scale`
             className="text-blue-900"
           >
             <em>Active-Empathic Listening Scale</em>

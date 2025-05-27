@@ -8,7 +8,7 @@ const AboutAuthor = () => {
       </p>
       <img
         alt="Mark Travers, Ph.D."
-        src="https://therapytips.org/photos/mark-travers-phd.png"
+        src=`${process.env.BASE_URL}/photos/mark-travers-phd.png`
         width="100px"
         height="100px"
       />

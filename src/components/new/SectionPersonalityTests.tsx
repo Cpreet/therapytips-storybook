@@ -1,18 +1,12 @@
-import scales from "@/assets/scales.png";
+import ArticleCard from "./ArticleCard";
+import { getArticles } from "@/lib/api";
+
+const tests = await getArticles({
+  article_type: "personality-tests",
+  limit: 2,
+});
 
 const SectionPersonalityTests = () => {
-  const tests = [
-    {
-      title: "Flourishing Measure",
-      image: scales,
-      link: "https://therapytips.org/personality-tests/flourishing-measure",
-    },
-    {
-      title: "Anger Management Scale",
-      image: scales,
-      link: "https://therapytips.org/personality-tests/anger-management-scale",
-    },
-  ];
   return (
     <section className="flex flex-col gap-2 md:gap-8 items-center">
       <div className="hidden md:block w-full">
@@ -21,12 +15,7 @@ const SectionPersonalityTests = () => {
         </h1>
         <div className="grid grid-cols-2 w-full gap-2 p-1">
           {tests.map((test) => (
-            <PersonalityTestCard
-              key={test.title}
-              title={test.title}
-              image={test.image}
-              link={test.link}
-            />
+            <ArticleCard key={test.title} {...test} />
           ))}
         </div>
       </div>
@@ -36,42 +25,11 @@ const SectionPersonalityTests = () => {
         </h1>
         <div className="grid grid-cols-1 w-full gap-2 p-2">
           {tests.map((test) => (
-            <PersonalityTestCard
-              key={test.title}
-              title={test.title}
-              image={test.image}
-              link={test.link}
-            />
+            <ArticleCard key={test.title} {...test} />
           ))}
         </div>
       </div>
     </section>
-  );
-};
-
-type PersonalityTest = {
-  title: string;
-  image: string;
-  link: string;
-};
-
-const PersonalityTestCard = (test: PersonalityTest) => {
-  return (
-    <div className="flex flex-col text-center group">
-      <img
-        src={test.image}
-        alt={test.title}
-        height={250}
-        className="object-cover group-hover:cursor-pointer"
-      />
-      <a
-        href={test.link}
-        className="flex flex-col bg-(--therapy-tips)/22 p-2
-        group-hover:bg-fuchsia-950 group-hover:cursor-pointer group-hover:text-white transition-all duration-200"
-      >
-        <h2 className="text-sm font-bold">{test.title}</h2>
-      </a>
-    </div>
   );
 };
 

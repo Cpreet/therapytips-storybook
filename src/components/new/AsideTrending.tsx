@@ -1,21 +1,22 @@
 import { ChevronRightIcon, TrendingUpIcon } from "lucide-react";
+import process from "process";
 
 const AsideTrending = () => {
   const items = [
     {
       title: "Highly Sensitive Person Questionnaire",
       views: 4156,
-      link: "https://therapytips.org/personality-tests/highly-sensitive-person-questionnaire",
+      link: `${process.env.BASE_URL}/personality-tests/highly-sensitive-person-questionnaire`,
     },
     {
       title: "Authneticity In Relationships",
       views: 2217,
-      link: "https://therapytips.org/personality-tests/authenticity-in-realationships",
+      link: `${process.env.BASE_URL}/personality-tests/authenticity-in-realationships`,
     },
     {
       title: "Relationship Flourishing Scale",
       views: 1381,
-      link: "https://therapytips.org/personality-tests/relationship-flourishing-scale",
+      link: `${process.env.BASE_URL}/personality-tests/relationship-flourishing-scale`,
     },
     {
       title: "Relationship Satisfaction Scale",
@@ -25,12 +26,12 @@ const AsideTrending = () => {
     {
       title: "Perceived Responsiveness Scale",
       views: 1063,
-      link: "https://therapytips.org/personality-tests/perceived-responsiveness-scale",
+      link: `${process.env.BASE_URL}/personality-tests/perceived-responsiveness-scale`,
     },
     {
       title: "Marital Satisfaction Scale",
       views: 848,
-      link: "https://therapytips.org/personality-tests/marital-satisfaction-scale",
+      link: `${process.env.BASE_URL}/personality-tests/marital-satisfaction-scale`,
     },
   ];
   return (

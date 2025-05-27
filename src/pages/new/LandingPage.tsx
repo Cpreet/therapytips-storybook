@@ -10,12 +10,10 @@ import SectionArticles from "@/components/new/SectionArticles";
 import SectionInterviews from "@/components/new/SectionInterviews";
 import SectionPersonlityTests from "@/components/new/SectionPersonalityTests";
 import { Separator } from "@/components/ui/separator";
-import BaseHead from "@/components/new/BaseHead";
 
 const LandingPage = () => {
   return (
     <>
-      <BaseHead />
       <div className="flex flex-col max-w-[1400px] md:m-4 xl:mx-auto border rounded-lg shadow-lg bg-white">
         <Header />
         <main>

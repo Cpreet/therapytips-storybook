@@ -1,22 +1,20 @@
 import Footer from "@/components/new/Footer";
 import Header from "@/components/new/Header";
 import Hero from "@/components/new/Hero";
-import { ArticleCard } from "@/components/new/SectionArticles";
+import ArticleCard from "@/components/new/ArticleCard";
 import AsideTrending from "@/components/new/AsideTrending";
 import AsideJournal from "@/components/new/AsideJournal";
 import AsideVideos from "@/components/new/AsideVideos";
 import CTA from "@/components/new/CTA";
 import { Separator } from "@/components/ui/separator";
+import { getArticles } from "@/lib/api";
+
+const articles = await getArticles({
+  article_type: "interviews",
+  limit: 16,
+});
 
 const InterviewsPage = ({ aside = false }: { aside: boolean }) => {
-  const articles = [...Array(16).keys()].map(() => ({
-    title: "title",
-    description: "description",
-    image:
-      "https://wallpapers.com/images/hd/vibrant-mountain-lake-scenic-yif3zbqokb0oq5yw.jpg",
-    link: "#",
-  }));
-  console.log(articles);
   return (
     <div className="flex flex-col max-w-[1400px] md:m-4 xl:mx-auto border rounded-lg shadow-lg bg-white">
       <Header />
@@ -39,11 +37,11 @@ const InterviewsPage = ({ aside = false }: { aside: boolean }) => {
             </div>
           </div>
           {aside && (
-            <>
+            <div className="hidden md:flex w-1/5">
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 w-px bg-fuchsia-950/35"></div>
               </div>
-              <div className="flex flex-col gap-4 w-1/5">
+              <div className="flex flex-col gap-4 md:px-3">
                 <AsideTrending />
                 <Separator
                   orientation="horizontal"
@@ -61,7 +59,7 @@ const InterviewsPage = ({ aside = false }: { aside: boolean }) => {
                 />
                 <CTA />
               </div>
-            </>
+            </div>
           )}
         </div>
       </main>

@@ -1,4 +1,5 @@
 import { ChevronRightIcon } from "lucide-react";
+import process from "process";
 
 const AsideJournal = () => {
   return (
@@ -17,7 +18,7 @@ const AsideJournal = () => {
           </strong>{" "}
           mailing list?
         </p>
-        <a href="https://therapytips.org/weekly-wisdom-signup">
+        <a href={`${process.env.BASE_URL}/weekly-wisdom-signup`}>
           <button
             className="flex w-fit items-center gap-2 border-2 border-fuchsia-900 rounded-md px-4 py-2 
         hover:bg-fuchsia-950 hover:cursor-pointer hover:text-white transition-all duration-200"
@@ -36,7 +37,7 @@ const AsideJournal = () => {
             <strong className="font-bold">weekly journal prompt</strong> mailing
             list?
           </p>
-          <a href="https://therapytips.org/weekly-wisdom-signup">
+          <a href={`${process.env.BASE_URL}/weekly-wisdom-signup`}>
             <button
               className="flex w-fit items-center gap-2 border-2 border-fuchsia-900 rounded-md px-4 py-2 
         hover:bg-fuchsia-950 hover:cursor-pointer hover:text-white transition-all duration-200"

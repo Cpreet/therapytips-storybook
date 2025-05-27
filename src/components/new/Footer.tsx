@@ -1,6 +1,8 @@
 import therapytips from "@/assets/therapytips.svg";
 import bmc from "@/assets/bmc.png";
 import useMobile from "@/hooks/useMobile";
+import process from "process";
+
 const Footer = () => {
   const isMobile = useMobile();
   return (
@@ -43,7 +45,7 @@ const Footer = () => {
           </strong>{" "}
         </p>
         <a
-          href="https://therapytips.org/weekly-wisdom-signup"
+          href={`${process.env.BASE_URL}/weekly-wisdom-signup`}
           target="_blank"
           className="underline hover:cursor-pointer text-sm md:text-base"
         >
